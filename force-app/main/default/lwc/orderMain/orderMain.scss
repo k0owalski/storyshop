@@ -1,0 +1,25 @@
+.order-main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: max-content;
+    gap: 0 4rem;
+
+    width: 80%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 3rem 0 0;
+
+    .order-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 16rem));
+        gap: 1rem 2rem;
+
+        .order-form-input input {
+            color: var(--color-text);
+            background-color: var(--color-accent-alt);
+            border: none;
+            border-bottom: 1px solid var(--color-primary);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+<template>
+    <main class="book-list">
+        <template if:true={bookListLoaded}>
+            <template for:each={bookList} for:item="bookCard">
+                <c-book-card key={bookCard.id} book={bookCard}>
+                </c-book-card>
+            </template>
+        </template>
+    </main>
+</template>

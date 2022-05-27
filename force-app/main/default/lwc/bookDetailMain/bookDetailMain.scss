@@ -1,0 +1,151 @@
+.storyshop-icon {
+    --sds-c-icon-color-foreground-default: var(--color-primary);
+}
+
+.storyshop-icon-alt {
+    --sds-c-icon-color-foreground-default: var(--color-background);
+}
+
+.book-detail {
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 3rem 0 0;
+
+    .bread-crumbs {
+        display: flex;
+        gap: .5rem;
+
+        width: 100%;
+
+        margin: 0 0 2rem;
+    }
+
+    .book-detail-main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0 6rem;
+
+        .cover-image {
+            display: block;
+
+            width: 100%;
+            aspect-ratio: 420 / 512;
+
+            object-fit: cover;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+
+            gap: 1.5rem;
+
+            .title {
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+
+            .author {
+                display: flex;
+                gap: .75rem;
+            }
+
+            .add-to-cart {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: fit-content;
+                height: 3rem;
+
+                margin: 2.5rem 0 0;
+                padding: 0;
+
+                background-color: var(--color-background);
+                border: 2px solid var(--color-accent);
+                border-radius: .25rem;
+                overflow: hidden;
+
+                .add-to-cart-icon {
+                    display: grid;
+                    place-items: center;
+
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+
+                    background-color: var(--color-accent);
+                }
+
+                .add-to-cart-price {
+                    display: block;
+
+                    font-size: 1.5rem;
+                    font-weight: 600;
+
+                    color: var(--color-primary);
+
+                    margin: 0 1rem;
+                }
+            }
+
+            .amount {
+                display: flex;
+                align-items: center;
+                gap: 0 1.5rem;
+
+                width: fit-content;
+                height: 3rem;
+
+                .amount-controls {
+                    display: flex;
+
+                    width: 9rem;
+                    height: 100%;
+
+                    background-color: var(--color-accent-alt);
+                    border-radius: .25rem;
+
+                    .amount-subtract,
+                    .amount-input,
+                    .amount-add {
+                        height: 100%;
+                        aspect-ratio: 1 / 1;
+
+                        font-size: 1.5rem;
+                        font-weight: 500;
+
+                        border: none;
+                        background: unset;
+
+                        &.amount-input {
+                            text-align: center;
+
+                            color: var(--color-primary);
+                            background-color: var(--color-background);
+                            border: 2px solid var(--color-primary);
+                            border-radius: .25rem;
+
+                            opacity: .9;
+                            -moz-appearance: textfield;
+
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                .availability {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

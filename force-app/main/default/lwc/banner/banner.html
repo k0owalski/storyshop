@@ -1,0 +1,16 @@
+<template>
+  <template if:true={slidesLoaded}>
+    <div class="banner">
+      <template for:each={slides} for:item="slide" for:index="index">
+        <div class="banner-slide" key={slide.id}>
+          <div class="slide-content">
+            <span class="slide-title">{slide.title}</span>
+            <template if:true={slide.subtitle}><span class="slide-subtitle">{slide.subtitle}</span></template>
+            <template if:true={slide.href}><a class="slide-button" href={slide.href}>Sprawdź</a></template>
+          </div>
+          <img class="background-image" src={slide.src} alt={slide.title}>
+        </div>
+      </template>
+    </div>
+  </template>
+</template>

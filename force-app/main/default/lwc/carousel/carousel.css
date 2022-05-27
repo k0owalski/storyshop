@@ -1,0 +1,67 @@
+.carousel {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(256px, 25%) 1fr;
+      grid-template-columns: minmax(256px, 25%) 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  width: 80%;
+  max-width: 1500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 3rem auto 0;
+  color: var(--color-text);
+  background-color: var(--color-accent-alt);
+  border-radius: .5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    height: 32rem;
+  }
+}
+
+.carousel .carousel-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: min-content 1fr min-content;
+      grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+      grid-template-rows: min-content 1fr min-content;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.carousel .carousel-content .carousel-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.carousel .carousel-content .carousel-read-more {
+  text-decoration: none;
+  color: inherit;
+}
+
+.carousel .carousel-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  overflow-y: hidden;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary);
+  scrollbar-base-color: var(--color-primary);
+}
+/*# sourceMappingURL=carousel.css.map */

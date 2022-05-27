@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAChB,KAAK,EAAE,IAAI;EAEX,OAAO,EAAE,MAAM;EAEf,gBAAgB,EAAE,uBAAuB;EACzC,aAAa,EAAE,KAAK;CAkBvB;;AAxBD,AAQI,mBARe,CAQf,mBAAmB,CAAC;EAChB,+CAA+C,CAAA,wBAAC;CAQnD;;AAjBL,AAmBI,mBAnBe,CAmBf,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;EAC9B,GAAG,EAAE,IAAI;CACZ",
+    "sources": [
+        "bookListFilters.scss"
+    ],
+    "names": [],
+    "file": "bookListFilters.css"
+}

@@ -1,0 +1,169 @@
+.storyshop-icon {
+  --sds-c-icon-color-foreground-default: var(--color-primary);
+}
+
+.storyshop-icon-alt {
+  --sds-c-icon-color-foreground-default: var(--color-background);
+}
+
+.book-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+}
+
+.book-detail .bread-crumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .5rem;
+  width: 100%;
+  margin: 0 0 2rem;
+}
+
+.book-detail .book-detail-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  gap: 0 6rem;
+}
+
+.book-detail .book-detail-main .cover-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 420 / 512;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.book-detail .book-detail-main .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-detail .book-detail-main .main-content .title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.book-detail .book-detail-main .main-content .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .75rem;
+}
+
+.book-detail .book-detail-main .main-content .add-to-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  background-color: var(--color-background);
+  border: 2px solid var(--color-accent);
+  border-radius: .25rem;
+  overflow: hidden;
+}
+
+.book-detail .book-detail-main .main-content .add-to-cart .add-to-cart-icon {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-accent);
+}
+
+.book-detail .book-detail-main .main-content .add-to-cart .add-to-cart-price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 1rem;
+}
+
+.book-detail .book-detail-main .main-content .amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 3rem;
+}
+
+.book-detail .book-detail-main .main-content .amount .amount-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 9rem;
+  height: 100%;
+  background-color: var(--color-accent-alt);
+  border-radius: .25rem;
+}
+
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-subtract,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-input,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-add {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  background: unset;
+}
+
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-subtract.amount-input,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-input.amount-input,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-add.amount-input {
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-primary);
+  border-radius: .25rem;
+  opacity: .9;
+  -moz-appearance: textfield;
+}
+
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-subtract.amount-input::-webkit-outer-spin-button, .book-detail .book-detail-main .main-content .amount .amount-controls .amount-subtract.amount-input::-webkit-inner-spin-button,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-input.amount-input::-webkit-outer-spin-button,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-input.amount-input::-webkit-inner-spin-button,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-add.amount-input::-webkit-outer-spin-button,
+.book-detail .book-detail-main .main-content .amount .amount-controls .amount-add.amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.book-detail .book-detail-main .main-content .amount .availability {
+  opacity: .8;
+}
+/*# sourceMappingURL=bookDetailMain.css.map */

@@ -1,0 +1,14 @@
+<template>
+    <form class="login-form">
+        <lightning-input class="login-username" name="username" type="text" value={username} label="Nazwa użytkownika"
+            data-field="username" onchange={fieldChange}>
+        </lightning-input>
+        <lightning-input class="login-password" name="password" type="password" value={password} label="Hasło"
+            data-field="password" onchange={fieldChange}>
+        </lightning-input>
+        <button class="login-submit" value="Zaloguj się" onclick={signIn}><label>Zaloguj się</label></button>
+        <span onclick={navigateToForgot}>Odzyskaj hasło</span>
+        <span onclick={navigateToRegister}>Nie masz jeszcze konta?
+            Zarejestruj się!</span>
+    </form>
+</template>

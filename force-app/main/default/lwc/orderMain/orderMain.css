@@ -1,0 +1,30 @@
+.order-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  gap: 0 4rem;
+  width: 80%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+}
+
+.order-main .order-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(8rem, 16rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(8rem, 16rem));
+  gap: 1rem 2rem;
+}
+
+.order-main .order-form .order-form-input input {
+  color: var(--color-text);
+  background-color: var(--color-accent-alt);
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+}
+/*# sourceMappingURL=orderMain.css.map */

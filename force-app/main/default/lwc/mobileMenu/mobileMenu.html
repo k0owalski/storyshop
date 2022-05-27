@@ -1,0 +1,33 @@
+<template>
+    <div class={mobileMenuClassList}>
+        <label class="searchbar-label" for="search-bar">Wyszukaj książki po nazwię lub kodzie ISBN</label>
+        <input class="searchbar" id="search-bar" name="search" type="search" placeholder="Szukaj...">
+        <div class="cart-button" onclick={navigateToCart}>
+            <lightning-icon class="cart-button-icon storyshop-icon" icon-name="utility:cart"
+                alternative-text="favorite-icon" title="favorite-icon">
+                <label>Cart</label>
+            </lightning-icon>
+            <span>Koszyk ({formattedCartLength})</span>
+        </div>
+        <template if:true={userId}>
+            <template if:true={userName}>
+                <div class="login-button" onclick={navigateToUserPanel}>
+                    <lightning-icon class="login-button-icon storyshop-icon" icon-name="utility:user"
+                        alternative-text="login-icon" size="small" title="login-icon">
+                        <label>User Panel</label>
+                    </lightning-icon>
+                    <span class="username">{userName}</span>
+                </div>
+            </template>
+        </template>
+        <template if:false={userId}>
+            <div class="login-button" onclick={navigateToLogin}>
+                <lightning-icon class="login-button-icon storyshop-icon" icon-name="utility:user"
+                    alternative-text="login-icon" size="small" title="login-icon">
+                    <label>User Panel</label>
+                </lightning-icon>
+                <span>Zaloguj się</span>
+            </div>
+        </template>
+    </div>
+</template>

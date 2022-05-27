@@ -1,0 +1,25 @@
+.book-list-filterBy {
+    width: 100%;
+
+    padding: 1.5rem;
+
+    background-color: var(--color-accent-alt);
+    border-radius: .5rem;
+
+    .flag-toggle-filter {
+        --sds-c-checkbox-toggle-switch-color-background: var(--color-background);
+        // --slds-c-checkbox-toggle-color-background
+        // --slds-c-checkbox-toggle-color-background-checked-focus
+        // --slds-c-checkbox-toggle-color-background-hover
+        // --slds-c-checkbox-toggle-color-border
+        // --slds-c-checkbox-toggle-mark-color-foreground
+        // --slds-c-checkbox-toggle-switch-color-background
+        // --slds-c-checkbox-toggle-switch-color-background-checked
+    }
+
+    .price-filter {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}

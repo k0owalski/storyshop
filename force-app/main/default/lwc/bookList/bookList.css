@@ -1,0 +1,70 @@
+.book-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (7rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 7rem);
+  grid-auto-rows: 14rem;
+  gap: 3rem;
+}
+
+.book-list .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 1rem;
+  height: 2rem;
+  grid-column: 1 / -1;
+}
+
+.book-list .pagination .pagination-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 6rem;
+  height: 100%;
+  background-color: var(--color-accent-alt);
+  border-radius: .25rem;
+}
+
+.book-list .pagination .pagination-controls .pagination-prev,
+.book-list .pagination .pagination-controls .pagination-input,
+.book-list .pagination .pagination-controls .pagination-next {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  background: unset;
+}
+
+.book-list .pagination .pagination-controls .pagination-prev.pagination-input,
+.book-list .pagination .pagination-controls .pagination-input.pagination-input,
+.book-list .pagination .pagination-controls .pagination-next.pagination-input {
+  text-align: center;
+  color: var(--color-primary);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-primary);
+  border-radius: .25rem;
+  opacity: .9;
+  -moz-appearance: textfield;
+}
+
+.book-list .pagination .pagination-controls .pagination-prev.pagination-input::-webkit-outer-spin-button, .book-list .pagination .pagination-controls .pagination-prev.pagination-input::-webkit-inner-spin-button,
+.book-list .pagination .pagination-controls .pagination-input.pagination-input::-webkit-outer-spin-button,
+.book-list .pagination .pagination-controls .pagination-input.pagination-input::-webkit-inner-spin-button,
+.book-list .pagination .pagination-controls .pagination-next.pagination-input::-webkit-outer-spin-button,
+.book-list .pagination .pagination-controls .pagination-next.pagination-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.book-list .pagination .pagination-page-count {
+  opacity: .8;
+}
+/*# sourceMappingURL=bookList.css.map */

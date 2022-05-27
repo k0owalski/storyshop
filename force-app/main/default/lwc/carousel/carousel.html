@@ -1,0 +1,17 @@
+<template>
+  <template if:true={booksLoaded}>
+    <section class="carousel">
+      <div class="carousel-content">
+        <p class="carousel-title">{sectionName}</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsa optio corrupti.</p>
+        <a class="carousel-read-more" href={readMoreLink}>Zobacz więcej --></a>
+      </div>
+      <div class="carousel-items">
+        <template for:each={books} for:item="book">
+          <c-book-card key={book.id} book={book}>
+          </c-book-card>
+        </template>
+      </div>
+    </section>
+  </template>
+</template>

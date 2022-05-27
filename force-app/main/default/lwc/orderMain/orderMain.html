@@ -1,0 +1,26 @@
+<template>
+    <template if:true={contactDataLoaded}>
+        <main class="order-main">
+            <form class="order-form">
+                <lightning-input class="order-form-input" type="text" value={contactData.name} label="Imię i nazwisko"
+                    data-field="name" onchange={inputChange} required>
+                </lightning-input>
+                <lightning-input class="order-form-input" type="phone" value={contactData.phone} label="Nr telefonu"
+                    data-field="phone" onchange={inputChange} required>
+                </lightning-input>
+                <lightning-input class="order-form-input" type="text" value={contactData.street}
+                    label="Ulica, nr budynku / lokalu" data-field="street" onchange={inputChange} required>
+                </lightning-input>
+                <lightning-input class="order-form-input" type="text" value={contactData.postal} label="Kod pocztowy"
+                    data-field="postal" onchange={inputChange} required>
+                </lightning-input>
+                <lightning-input class="order-form-input" type="text" value={contactData.city} label="Miejscowość"
+                    data-field="city" onchange={inputChange} required>
+                </lightning-input>
+            </form>
+            <div class="order-summary">
+                <button class="order-summary-button" onclick={createNewOrder}><label>Złóż zamówienie</label></button>
+            </div>
+        </main>
+    </template>
+</template>

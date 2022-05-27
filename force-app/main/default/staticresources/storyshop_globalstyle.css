@@ -1,0 +1,11 @@
+.app {
+  --color-primary: #525E75;
+  --color-secondary: #434D60;
+  --color-accent: #CA2F2F;
+  --color-accent-alt: #EAE6E3;
+  --color-background: #F6F2ED;
+  --color-text: #3A3845;
+
+  --font-primary: 'Montserrat';
+  --font-secondary: 'Nunito';
+}

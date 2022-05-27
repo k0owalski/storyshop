@@ -1,0 +1,19 @@
+.book-list-filterBy {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--color-accent-alt);
+  border-radius: .5rem;
+}
+
+.book-list-filterBy .flag-toggle-filter {
+  --sds-c-checkbox-toggle-switch-color-background: var(--color-background);
+}
+
+.book-list-filterBy .price-filter {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+/*# sourceMappingURL=bookListFilters.css.map */

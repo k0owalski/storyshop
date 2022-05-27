@@ -1,0 +1,17 @@
+<template>
+  <nav class="navigation">
+    <div class="navigation-inner-wrapper">
+      <!-- change to Button - complete the expanding menu -->
+      <a href={searchLink} class="navigation-item navigation-item--button">
+        <span>Wszystkie kategorie</span>
+        <lightning-icon class="navigation-item-expand-icon storyshop-icon-alt" icon-name="utility:down"
+          alternative-text="Expand category list" size="xx-small" title="Expand category list">
+          <label>Expand category list</label>
+        </lightning-icon>
+      </a>
+      <template for:each={navigationItems} for:item="navItem">
+        <a class="navigation-item" href={navItem.url} key={navItem.id}>{navItem.name}</a>
+      </template>
+    </div>
+  </nav>
+</template>

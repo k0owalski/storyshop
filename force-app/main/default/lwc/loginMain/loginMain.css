@@ -1,0 +1,8 @@
+.login-form {
+  display: -ms-grid;
+  display: grid;
+  width: 20rem;
+  max-width: 80%;
+  margin: 2rem auto;
+}
+/*# sourceMappingURL=loginMain.css.map */

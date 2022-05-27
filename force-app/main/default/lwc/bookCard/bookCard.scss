@@ -1,0 +1,71 @@
+.storyshop-icon {
+    --sds-c-icon-color-foreground-default: var(--color-primary);
+}
+
+.storyshop-icon-alt {
+    --sds-c-icon-color-foreground-default: var(--color-background);
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem 0;
+
+    width: 7rem;
+    height: 14rem;
+
+    .thumbnail-wrapper {
+        width: 7rem;
+        height: 9rem;
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .title {
+        display: block;
+        width: 100%;
+        height: 2rem;
+
+        font-size: .75rem;
+        font-weight: 400;
+        text-decoration: none;
+
+        color: var(--color-text);
+
+        overflow: hidden;
+    }
+
+    .add-to-cart {
+        display: flex;
+        gap: 0 .5rem;
+
+        max-width: 100%;
+        height: 1.5rem;
+
+        .add-to-cart-button {
+            display: grid;
+            place-items: center;
+
+            width: 1.5rem;
+            height: 1.5rem;
+
+            padding: none;
+
+            background-color: var(--color-accent);
+            border: none;
+            border-radius: .25rem;
+        }
+
+        .price {
+            font-size: 1rem;
+            font-weight: 600;
+
+            color: var(--color-primary);
+        }
+    }
+}

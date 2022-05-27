@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Filters</masterLabel>
+    <description>This is a sample Filter Message Channel.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <fieldName>category</fieldName>
+        <description>Category</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>flag</fieldName>
+        <description>Flag</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>page</fieldName>
+        <description>Page</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>itemsPerPage</fieldName>
+        <description>Items Per Page</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>pageCount</fieldName>
+        <description>Page Count</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>minPrice</fieldName>
+        <description>Min Price</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>maxPrice</fieldName>
+        <description>Max Price</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>orderBy</fieldName>
+        <description>Order By</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

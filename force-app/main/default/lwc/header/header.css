@@ -1,0 +1,185 @@
+.storyshop-icon {
+  --sds-c-icon-color-foreground-default: var(--color-primary);
+}
+
+.storyshop-icon-alt {
+  --sds-c-icon-color-foreground-default: var(--color-background);
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80%;
+      grid-template-columns: 80%;
+  -ms-grid-rows: 5rem 4rem;
+      grid-template-rows: 5rem 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 9rem;
+  position: relative;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  z-index: 10;
+}
+
+.header .topbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr max-content;
+      grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+      grid-template-columns: max-content 1fr max-content;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 4rem;
+  max-width: 1500px;
+}
+
+@media screen and (max-width: 976px) {
+  .header .topbar {
+    -ms-grid-columns: max-content max-content;
+        grid-template-columns: -webkit-max-content -webkit-max-content;
+        grid-template-columns: max-content max-content;
+    gap: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header .topbar .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  padding: 0;
+  text-decoration: none;
+  color: var(--color-background);
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+.header .topbar .brand .brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header .topbar .searchbar {
+  height: 3rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
+  color: var(--color-background);
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: .25rem;
+  outline: none;
+}
+
+@media screen and (max-width: 976px) {
+  .header .topbar .searchbar {
+    display: none;
+  }
+}
+
+.header .topbar .quick-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.header .topbar .quick-actions .cart-button,
+.header .topbar .quick-actions .login-button,
+.header .topbar .quick-actions .mobile-menu-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: none;
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 976px) {
+  .header .topbar .quick-actions .cart-button,
+  .header .topbar .quick-actions .login-button,
+  .header .topbar .quick-actions .mobile-menu-button {
+    display: none;
+  }
+}
+
+.header .topbar .quick-actions .cart-button.cart-button .items-length,
+.header .topbar .quick-actions .login-button.cart-button .items-length,
+.header .topbar .quick-actions .mobile-menu-button.cart-button .items-length {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  right: -1rem;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  font-size: .9rem;
+  line-height: 0;
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.header .topbar .quick-actions .login-button,
+.header .topbar .quick-actions .mobile-menu-button {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: .5rem;
+  height: 3rem;
+  padding: .5rem;
+  font-weight: 500;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border-radius: .25rem;
+}
+
+.header .topbar .quick-actions .login-button .username,
+.header .topbar .quick-actions .mobile-menu-button .username {
+  display: block;
+  max-width: 9rem;
+  height: 1.5rem;
+  overflow-x: hidden;
+}
+
+.header .topbar .quick-actions .mobile-menu-button {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media screen and (max-width: 976px) {
+  .header .topbar .quick-actions .mobile-menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=header.css.map */

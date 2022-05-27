@@ -1,0 +1,29 @@
+.error-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    width: 100%;
+    height: calc(100vh - 9rem);
+
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    a {
+        display: block;
+
+        padding: 1rem 1.5rem;
+
+        text-decoration: none;
+
+        color: var(--color-background);
+        background-color: var(--color-primary);
+
+        border: none;
+        border-radius: .25rem;
+    }
+}

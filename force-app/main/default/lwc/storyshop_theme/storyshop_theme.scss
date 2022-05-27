@@ -1,0 +1,20 @@
+.app * {
+    --dxp-c-section-content-spacing-block-start: 0 !important;
+    --dxp-c-section-content-spacing-block-start-mobile: 0 !important;
+    --dxp-s-section-content-spacing-block-start: 0 !important;
+    --dxp-s-section-content-spacing-block-start-mobile: 0 !important;
+    --dxp-c-section-content-spacing-inline-end: 0 !important;
+    --dxp-c-section-content-spacing-inline-end-mobile: 0 !important;
+    --dxp-c-section-content-spacing-block-end: 0 !important;
+    --dxp-c-section-content-spacing-block-end-mobile: 0 !important;
+    --dxp-s-section-content-spacing-block-end: 0 !important;
+    --dxp-s-section-content-spacing-block-end-mobile: 0 !important;
+    --dxp-c-section-content-spacing-inline-start: 0 !important;
+    --dxp-c-section-content-spacing-inline-start-mobile: 0 !important;
+
+    color: var(--color-text);
+
+    .none {
+        display: none !important;
+    }
+}

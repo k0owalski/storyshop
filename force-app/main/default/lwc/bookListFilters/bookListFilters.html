@@ -1,0 +1,17 @@
+<template>
+    <aside class="book-list-filterBy">
+        <lightning-combobox name="sortBy" label="Sortowanie:" value={filterSettings.orderBy} options={orderByOptions}
+            onchange={orderByOnChange}></lightning-combobox>
+        <lightning-combobox name="itemsPerPage" label="Ilość produktów na stronie:" value={filterSettings.itemsPerPage}
+            options={itemsPerPageOptions} onchange={itemsPerPageOnChange}>
+        </lightning-combobox>
+        <div class="price-filter">
+            <lightning-input class="price-filter-from" type="number" name="price-from" label="Cena od:" step=".01"
+                value="0" onchange={minPriceOnChange}>
+            </lightning-input>
+            <lightning-input class="price-filter-to" type="number" name="price-to" label="Cena do:" step=".01" value="0"
+                onchange={maxPriceyOnChange}>
+            </lightning-input>
+        </div>
+    </aside>
+</template>

@@ -1,0 +1,11 @@
+.search-main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 6rem;
+
+    width: 80%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 3rem 0 0;
+}

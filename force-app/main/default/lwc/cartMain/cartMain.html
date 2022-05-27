@@ -1,0 +1,42 @@
+<template>
+    <main class="cart-main">
+        <div class="title">
+            <span>Koszyk</span>
+        </div>
+        <div class="cart-list">
+            <template if:true={cart}>
+                <template for:each={cart} for:item="cartItem" for:index="cartItemIndex">
+                    <div class="cart-list-item" key={cartItem.id}>
+                        <img class="cart-list-item-thumbnail" src={cartItem.thumbnail} alt="Podgląd produktu">
+                        <div class="cart-list-item-content">
+                            <a class="cart-list-item-title" href={cartItem.url}>{cartItem.title}</a>
+                            <div class="amount-controls">
+                                <button class="amount-subtract" onclick={amountSubtractClick}
+                                    data-index={cartItemIndex}><label data-index={cartItemIndex}>-</label></button>
+                                <input class="amount-input" type="number" name="ammount" value={cartItem.amount}
+                                    onchange={amountChange} data-index={cartItemIndex}>
+                                <button class="amount-add" onclick={amountAddClick} data-index={cartItemIndex}><label
+                                        data-index={cartItemIndex}>+</label></button>
+                            </div>
+                        </div>
+                        <lightning-formatted-number class="cart-list-item-price" value={cartItem.stackPrice}
+                            format-style="currency" currency-code="PLN" maximum-fraction-digits="2">
+                        </lightning-formatted-number>
+                    </div>
+                </template>
+            </template>
+            <template if:false={cart}>
+                <div class="no-items">
+                    W twoim koszyku nie ma produktów.
+                </div>
+            </template>
+        </div>
+        <div class="cart-summary">
+            <span class="cart-summary-title">Podsumowanie</span>
+            <lightning-formatted-number class="cart-summary-value" value={cartValue} format-style="currency"
+                currency-code="PLN" maximum-fraction-digits="2">
+            </lightning-formatted-number>
+            <a class="cart-summary-button" href={orderPageLink} onclick={setNewOrder}>Zamów</a>
+        </div>
+    </main>
+</template>

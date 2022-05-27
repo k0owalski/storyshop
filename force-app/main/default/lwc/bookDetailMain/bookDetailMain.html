@@ -1,0 +1,43 @@
+<template>
+    <template if:true={bookLoaded}>
+        <div class="book-detail">
+            <div class="bread-crumbs">
+                <a href={bookListLink}>Wszystkie
+                    kategorie</a>
+                <span> &gt; </span>
+                <a href={categoryLink}>{book.categoryName}</a>
+                <span> &gt; </span>
+                <span>{book.title}</span>
+            </div>
+            <main class="book-detail-main">
+                <img class="cover-image" src={book.thumbnail} alt="Cover image" width="420" height="512">
+                <div class="main-content">
+                    <h1 class="title">{book.title}</h1>
+                    <div class="author">
+                        <span>Autor:</span>
+                        <span>{book.author}</span>
+                    </div>
+                    <p class="description">{book.description}</p>
+                    <button class="add-to-cart" type="button" onclick={addToCart}>
+                        <div class="add-to-cart-icon">
+                            <lightning-icon class="storyshop-icon-alt" icon-name="utility:cart" size="small">
+                                <label>Add to
+                                    cart</label>
+                            </lightning-icon>
+                        </div>
+                        <span class="add-to-cart-price">{book.price} PLN</span>
+                    </button>
+                    <div class="amount">
+                        <div class="amount-controls">
+                            <button class="amount-subtract" onclick={amountSubtractClick}>-</button>
+                            <input class="amount-input" type="number" name="ammount" value={amount}
+                                onchange={amountChange}>
+                            <button class="amount-add" onclick={amountAddClick}>+</button>
+                        </div>
+                        <span class="availability">z {book.availability} sztuk</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </template>
+</template>

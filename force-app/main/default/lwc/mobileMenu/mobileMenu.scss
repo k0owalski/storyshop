@@ -1,0 +1,65 @@
+.storyshop-icon {
+    --sds-c-icon-color-foreground-default: var(--color-primary);
+}
+
+.storyshop-icon-alt {
+    --sds-c-icon-color-foreground-default: var(--color-background);
+}
+
+.mobile-menu {
+    display: none;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 3rem;
+    gap: 2rem 0;
+
+    width: 100%;
+    height: fit-content;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateX(-100%);
+
+    padding: 2rem;
+
+    background-color: var(--color-primary);
+
+    @media screen and (min-width: 976px) {
+        display: none !important;
+    }
+
+    &.active {
+        display: grid;
+        transform: translateX(0%);
+    }
+
+    .searchbar-label {
+        display: none;
+    }
+
+    .searchbar {
+        padding: 0 1rem;
+
+        color: var(--color-background);
+        background-color: var(--color-secondary);
+        border: none;
+        border-radius: .25rem;
+
+        outline: none;
+    }
+
+    .cart-button,
+    .login-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+
+        color: var(--color-primary);
+        background-color: var(--color-background);
+
+        border-radius: .25rem;
+
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,21 @@
+<template>
+    <template if:true={book.id}>
+        <div class="book-card">
+            <a class="thumbnail-wrapper" href={detailPageLink}>
+                <img class="thumbnail" src={book.thumbnail} alt="Book thumbnail">
+            </a>
+            <a class="title" href={detailPageLink}>{book.title}</a>
+            <div class="add-to-cart" onclick={addToCart}>
+                <button class="add-to-cart-button">
+                    <lightning-icon class="cart-button-icon storyshop-icon-alt" icon-name="utility:cart"
+                        alternative-text="add-to-cart-icon" title="add-to-cart-icon" size="xx-small">
+                        <label>Add to cart</label>
+                    </lightning-icon>
+                </button>
+                <lightning-formatted-number class="price" format-style="currency" currency-code="PLN"
+                    value={book.price}>
+                </lightning-formatted-number>
+            </div>
+        </div>
+    </template>
+</template>
