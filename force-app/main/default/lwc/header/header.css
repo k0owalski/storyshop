@@ -24,6 +24,12 @@
   z-index: 10;
 }
 
+@media screen and (max-width: 976px) {
+  .header {
+    margin: 0 0 5rem;
+  }
+}
+
 .header .topbar {
   display: -ms-grid;
   display: grid;
@@ -69,9 +75,35 @@
   font-weight: 600;
 }
 
-.header .topbar .searchbar {
+.header .topbar .search-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 976px) {
+  .header .topbar .search-wrapper {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 9rem;
+    left: 0;
+    padding: 0 10%;
+    background-color: var(--color-primary);
+  }
+}
+
+.header .topbar .search-wrapper .searchbar {
+  width: 100%;
   height: 3rem;
-  margin: 1rem 0;
   padding: 0 1rem;
   color: var(--color-background);
   background-color: var(--color-secondary);
@@ -80,10 +112,24 @@
   outline: none;
 }
 
-@media screen and (max-width: 976px) {
-  .header .topbar .searchbar {
-    display: none;
-  }
+.header .topbar .search-wrapper .searchbar::-webkit-input-placeholder {
+  color: var(--color-background);
+  opacity: .64;
+}
+
+.header .topbar .search-wrapper .searchbar:-ms-input-placeholder {
+  color: var(--color-background);
+  opacity: .64;
+}
+
+.header .topbar .search-wrapper .searchbar::-ms-input-placeholder {
+  color: var(--color-background);
+  opacity: .64;
+}
+
+.header .topbar .search-wrapper .searchbar::placeholder {
+  color: var(--color-background);
+  opacity: .64;
 }
 
 .header .topbar .quick-actions {
@@ -97,8 +143,7 @@
 }
 
 .header .topbar .quick-actions .cart-button,
-.header .topbar .quick-actions .login-button,
-.header .topbar .quick-actions .mobile-menu-button {
+.header .topbar .quick-actions .login-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,17 +162,15 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 976px) {
-  .header .topbar .quick-actions .cart-button,
-  .header .topbar .quick-actions .login-button,
-  .header .topbar .quick-actions .mobile-menu-button {
+@media screen and (max-width: 576px) {
+  .header .topbar .quick-actions .cart-button.cart-button,
+  .header .topbar .quick-actions .login-button.cart-button {
     display: none;
   }
 }
 
 .header .topbar .quick-actions .cart-button.cart-button .items-length,
-.header .topbar .quick-actions .login-button.cart-button .items-length,
-.header .topbar .quick-actions .mobile-menu-button.cart-button .items-length {
+.header .topbar .quick-actions .login-button.cart-button .items-length {
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -144,12 +187,12 @@
   border-radius: 50%;
 }
 
-.header .topbar .quick-actions .login-button,
-.header .topbar .quick-actions .mobile-menu-button {
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+.header .topbar .quick-actions .login-button {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: .5rem;
+  min-width: 3rem;
   height: 3rem;
   padding: .5rem;
   font-weight: 500;
@@ -158,28 +201,16 @@
   border-radius: .25rem;
 }
 
-.header .topbar .quick-actions .login-button .username,
-.header .topbar .quick-actions .mobile-menu-button .username {
+.header .topbar .quick-actions .login-button .username {
   display: block;
   max-width: 9rem;
   height: 1.5rem;
   overflow-x: hidden;
 }
 
-.header .topbar .quick-actions .mobile-menu-button {
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-@media screen and (max-width: 976px) {
-  .header .topbar .quick-actions .mobile-menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media screen and (max-width: 576px) {
+  .header .topbar .quick-actions .login-button .username {
+    display: none;
   }
 }
 /*# sourceMappingURL=header.css.map */

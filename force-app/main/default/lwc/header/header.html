@@ -8,7 +8,9 @@
 				</lightning-icon>
 				<span class="brand-name">Story Shop</span>
 			</div>
-			<input class="searchbar" name="search" type="search" placeholder="Szukaj...">
+			<div class="search-wrapper">
+				<input class="searchbar" name="search" type="search" placeholder="Szukaj...">
+			</div>
 			<div class="quick-actions">
 				<div class="cart-button" onclick={navigateToCart}>
 					<lightning-icon class="cart-button-icon storyshop-icon-alt" icon-name="utility:cart"
@@ -39,19 +41,11 @@
 						</lightning-icon>
 					</div>
 				</template>
-				<button class="mobile-menu-button" type="button" onclick={mobileMenuClick}>
-					<lightning-icon class="mobile-menu-button-icon storyshop-icon" icon-name="utility:right_align_text"
-						alternative-text="Menu" size="x-small" title="Menu">
-						<label>Menu</label>
-					</lightning-icon>
-				</button>
 			</div>
 		</div>
 		<template if:true={navigationItemsLoaded}>
-			<c-navigation navigation-items={navigationItems}></c-navigation>
-			<c-mobile-menu navigation-items={navigationItems} user-id={userId} user-name={userName}
-				cart-length={cartLength} is-active={isMobileMenuActive}>
-			</c-mobile-menu>
+			<c-navigation navigation-items={navigationItems} cart-length={cartLength}>
+			</c-navigation>
 		</template>
 	</div>
 </template>

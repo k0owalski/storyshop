@@ -1,7 +1,6 @@
 <template>
   <nav class="navigation">
     <div class="navigation-inner-wrapper">
-      <!-- change to Button - complete the expanding menu -->
       <a href={searchLink} class="navigation-item navigation-item--button">
         <span>Wszystkie kategorie</span>
         <lightning-icon class="navigation-item-expand-icon storyshop-icon-alt" icon-name="utility:down"
@@ -11,6 +10,15 @@
       </a>
       <template for:each={navigationItems} for:item="navItem">
         <a class="navigation-item" href={navItem.url} key={navItem.id}>{navItem.name}</a>
+      </template>
+    </div>
+    <div class="cart-button" onclick={navigateToCart}>
+      <lightning-icon class="cart-button-icon storyshop-icon-alt" icon-name="utility:cart"
+        alternative-text="favorite-icon" title="favorite-icon">
+        <label>Cart</label>
+      </lightning-icon>
+      <template if:true={cartItemLength}>
+        <div class="items-length">{cartItemLength}</div>
       </template>
     </div>
   </nav>

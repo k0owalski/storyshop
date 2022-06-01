@@ -1,4 +1,4 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 
 import currentUserId from '@salesforce/user/Id';
@@ -17,8 +17,6 @@ export default class Navbar extends NavigationMixin(LightningElement) {
 
     navigationItems = [];
     navigationItemsLoaded = false;
-
-    @track isMobileMenuActive = false;
 
     messageContext = createMessageContext();
 
